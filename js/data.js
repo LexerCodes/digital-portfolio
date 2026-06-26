@@ -474,11 +474,11 @@ const PORTFOLIO = {
     siteTitle: "Portfolio — Your Name",
 
     // Your GitHub repository URL (fill in after setup)
-    githubRepo: null,
+    githubRepo: "https://github.com/LexerCodes/digital-portfolio",
 
     // Your live GitHub Pages URL (fill in after setup)
     // Example: "https://yourusername.github.io/portfolio"
-    liveUrl: null,
+    liveUrl: "https://lexercodes.github.io/digital-portfolio/",
 
     // Year shown in the footer
     year: "2025"
