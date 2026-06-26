@@ -54,7 +54,7 @@ const PORTFOLIO = {
     // Write 2–3 sentences in YOUR OWN VOICE.
     // What excites you? What do you stand for? What's your story?
     // Aim for honest and specific — not generic.
-    intro: "Write 2–3 sentences about who you are. What are you passionate about? What makes you different from everyone else in your school? Keep it honest and in your own words — this is the very first thing every visitor reads.",
+    intro: "I'm a Class 10 student at Vega Schools, Gurugram — passionate about coding, football, and music, in roughly that order. For me, coding is puzzle-solving at its best: every bug is a clue, every working project a small win. When I'm not at a keyboard you'll find me on the football pitch or behind a drum kit — and I think that's why I care so much about teamwork, because it shows up everywhere I go.",
 
     // ── INTEREST TAGS ─────────────────────────────────────────
     // Shown as coloured pills below your intro.
@@ -62,9 +62,9 @@ const PORTFOLIO = {
     interests: [
       "Coding",
       "Football",
-      "Music",
-      "Science",
-      "Reading"
+      "Drums & Music",
+      "Innovation",
+      "Problem Solving"
     ],
 
     // ── CORE VALUES ───────────────────────────────────────────
@@ -134,57 +134,116 @@ const PORTFOLIO = {
   // ════════════════════════════════════════════════════════
   //  ACADEMICS
   //
-  //  Fill in your actual grades for each class.
-  //  grade = your score (e.g. "A1", "95%", "Distinction")
-  //  note  = one short honest observation about that subject
+  //  Instead of grades, describe your relationship with each subject.
+  //  What do you enjoy about it? How has your thinking in it grown?
+  //  Write 2–3 honest sentences per subject.
+  //
+  //  Each subject follows this pattern:
+  //  { subject: "Subject Name", description: "Your description here." }
   // ════════════════════════════════════════════════════════
 
   academics: {
 
     // ── CLASS 5 TO 7 ──────────────────────────────────────────
     class5to7: {
-      // Label shown at the top of this section
       period: "Class 5 – 7  ·  2019 – 2022",
       // 1–2 sentences reflecting on this phase of your academic life
-      highlight: "Write a brief reflection on this period — what subjects excited you, what you discovered about yourself as a learner.",
+      highlight: "Write a brief reflection on this period — what subjects excited you, what did you discover about yourself as a learner?",
       subjects: [
         // Copy this pattern to add more subjects:
-        // { subject: "Subject Name", grade: "A1", note: "Short note." },
-        { subject: "Mathematics",    grade: "A1", note: "Always been my favourite — loved problem solving." },
-        { subject: "Science",        grade: "A1", note: "Especially enjoyed the experiments in Class 7." },
-        { subject: "English",        grade: "A2", note: "Developed a love for reading during this period." },
-        { subject: "Social Studies", grade: "B1", note: "Improved steadily across all three years." },
-        { subject: "Hindi",          grade: "A2", note: "Strong in comprehension and essay writing." }
+        // { subject: "Subject Name", description: "2–3 sentences about your experience with it." },
+        {
+          subject: "Mathematics",
+          description: "Describe your relationship with Maths in Class 5–7. What did you enjoy? What challenged you? How did you approach it?"
+        },
+        {
+          subject: "Science",
+          description: "What aspects of Science grabbed your attention during this period? Experiments? Theory? A specific topic?"
+        },
+        {
+          subject: "English",
+          description: "How did your reading and writing develop in these years? Any books or assignments that stood out?"
+        },
+        {
+          subject: "Social Studies",
+          description: "What parts of Social Studies interested you — history, geography, civics? How did your interest evolve?"
+        },
+        {
+          subject: "Hindi",
+          description: "Describe your experience learning Hindi — comprehension, writing, or speaking. What came naturally, what required effort?"
+        }
       ]
     },
 
     // ── CLASS 8 TO 9 ──────────────────────────────────────────
     class8to9: {
       period: "Class 8 – 9  ·  2022 – 2024",
-      highlight: "Write a reflection on Class 8–9 — how did your academic interests shift? What new challenges appeared?",
+      highlight: "Write a reflection on Class 8–9 — how did your academic interests shift? What new subjects or challenges appeared?",
       subjects: [
-        { subject: "Mathematics",        grade: "A1", note: "Scored 98/100 in Class 9 finals." },
-        { subject: "Science",            grade: "A1", note: "Chose to go deeper in Physics and Chemistry." },
-        { subject: "English Language",   grade: "A1", note: "Won inter-school essay competition in Class 9." },
-        { subject: "English Literature", grade: "A2", note: "Passionate about prose analysis." },
-        { subject: "Social Science",     grade: "A1", note: "Improved from B1 in Class 8 through consistent effort." },
-        { subject: "Hindi",              grade: "A2", note: "Scored consistently across both years." },
-        { subject: "IT / Computer Sc.",  grade: "A1", note: "My strongest subject — built my first website here." }
+        {
+          subject: "Mathematics",
+          description: "How did Maths change in Class 8–9? New topics like algebra, geometry, or statistics — which clicked, which took work?"
+        },
+        {
+          subject: "Science",
+          description: "Science splits into Physics, Chemistry, and Biology here. Which branch drew you in most, and why?"
+        },
+        {
+          subject: "English Language",
+          description: "How did your language skills grow? Writing, comprehension, grammar — any specific achievement or moment you remember?"
+        },
+        {
+          subject: "English Literature",
+          description: "What texts did you study? Did any story, poem, or character stay with you? How did you approach literary analysis?"
+        },
+        {
+          subject: "Social Science",
+          description: "Describe how History, Geography, or Civics engaged you across Class 8 and 9. Any topic that genuinely interested you?"
+        },
+        {
+          subject: "Hindi",
+          description: "How did your Hindi grow across these two years? Writing styles, grammar, or comprehension — where did you feel most confident?"
+        },
+        {
+          subject: "IT / Computer Science",
+          description: "This is where my real passion showed up. Write about what you built or learned in IT class — how it connected to your interest in coding."
+        }
       ]
     },
 
     // ── CLASS 10 ──────────────────────────────────────────────
     class10: {
       period: "Class 10  ·  2024 – 2025",
-      highlight: "Your current year. Share what you're focusing on, how your approach to studying has changed, and what you're targeting.",
+      highlight: "Your current year. Share how your approach to studying has matured, what you're focusing on, and what you're working toward.",
       subjects: [
-        { subject: "Mathematics",        grade: "In progress", note: "Targeting 100/100 — practising daily." },
-        { subject: "Science",            grade: "In progress", note: "Preparing for board-level questions." },
-        { subject: "English Language",   grade: "In progress", note: "Practising letter writing and comprehension." },
-        { subject: "English Literature", grade: "In progress", note: "Studying prescribed texts carefully." },
-        { subject: "Social Science",     grade: "In progress", note: "Maps and history timelines done." },
-        { subject: "Hindi",              grade: "In progress", note: "Revising grammar and composition rules." },
-        { subject: "IT",                 grade: "In progress", note: "Practical components completed." }
+        {
+          subject: "Mathematics",
+          description: "What's your strategy for Class 10 Maths? What topics are you strongest in? What are you targeting for boards?"
+        },
+        {
+          subject: "Science",
+          description: "How are you preparing across Physics, Chemistry, and Biology? Which area are you most confident in heading into boards?"
+        },
+        {
+          subject: "English Language",
+          description: "What does your English Language prep look like — letter writing, comprehension, grammar? How has your writing voice developed?"
+        },
+        {
+          subject: "English Literature",
+          description: "Which texts are you studying this year? What's your approach to essays and character analysis?"
+        },
+        {
+          subject: "Social Science",
+          description: "Class 10 Social Science is broad. How are you managing History, Geography, Economics, and Civics together?"
+        },
+        {
+          subject: "Hindi",
+          description: "How are you approaching Hindi boards — are you focusing on writing, grammar, or comprehension? What's your confidence level?"
+        },
+        {
+          subject: "Information Technology",
+          description: "IT is where school overlaps with my personal projects. Describe what you've been doing in IT this year and how it connects to your coding work outside class."
+        }
       ]
     }
   },
@@ -208,78 +267,64 @@ const PORTFOLIO = {
 
     // ── SPORTS ────────────────────────────────────────────────
     sports: [
+      // Replace this example with your real sports achievements.
+      // {
+      //   title:       "Tournament or event name",
+      //   year:        "2024",
+      //   position:    "Your result / rank / position",
+      //   organiser:   "Who organised it",
+      //   description: "1–2 sentences on what you did and why it mattered."
+      // },
       {
-        title:       "Inter-School Football Tournament",
+        title:       "Add Your Sports Achievement",
         year:        "2024",
-        position:    "Runner-Up",
-        organiser:   "District Sports Authority",
-        description: "Played as centre-midfielder for the school team across 6 matches. The team scored 14 goals total and reached the final for the first time in 5 years."
-      },
-      {
-        title:       "School Swimming Championship",
-        year:        "2023",
-        position:    "Gold — 100m Freestyle",
-        organiser:   "School Sports Board",
-        description: "Set a new school record in the 100m freestyle event with a time of 1:04.3, breaking the previous record by 2 seconds."
+        position:    null,
+        organiser:   "Organiser name",
+        description: "Replace this with a real sports achievement — a tournament, a school match, a personal best. Be specific about your role and the result."
       }
-      // ↑ Add more sports achievements here, separated by commas
     ],
 
-    // ── CULTURAL (Music / Dance / Theatre / Art) ──────────────
+    // ── CULTURAL (Music / Drums / Theatre / Art) ──────────────
     cultural: [
+      // Add your music/drums/cultural achievements here.
       {
-        title:       "Annual School Music Concert",
+        title:       "Add Your Cultural Achievement",
         year:        "2024",
-        position:    "Lead Performer",
-        organiser:   "School Cultural Committee",
-        description: "Performed an original guitar composition in front of 400+ audience members at the annual school concert."
-      },
-      {
-        title:       "State-Level Dance Competition",
-        year:        "2023",
-        position:    "2nd Place",
-        organiser:   "State Cultural Academy",
-        description: "Part of a 6-member classical dance group that performed Bharatanatyam. Trained for 4 months ahead of the competition."
+        position:    null,
+        organiser:   "Organiser name",
+        description: "Replace this with a real cultural achievement — a performance, a concert, a music competition, a school play. You play drums and sing, so think about performances you've given."
       }
-      // ↑ Add more cultural achievements here
     ],
 
     // ── LITERARY (Debate / MUN / Essay / Quiz) ────────────────
     literary: [
+      // Add any debate, MUN, essay, quiz, or public speaking achievements here.
       {
-        title:       "MUN — UNSC Committee",
+        title:       "Add Your Literary Achievement",
         year:        "2024",
-        position:    "Best Delegate",
-        organiser:   "Delhi MUN Conference",
-        description: "Represented France in the United Nations Security Council. Debated the climate crisis resolution and drafted the final amendment that passed by consensus."
-      },
-      {
-        title:       "Inter-School Debate Competition",
-        year:        "2023",
-        position:    "1st Place",
-        organiser:   "District Education Office",
-        description: "Debated on the motion 'AI is a threat to humanity' — argued the opposition and won by unanimous judges' decision."
+        position:    null,
+        organiser:   "Organiser name",
+        description: "Replace this with a debate, MUN, essay competition, quiz, or any literary achievement."
       }
-      // ↑ Add more literary achievements here
     ],
 
-    // ── TECHNICAL (Coding / Robotics / Science / STEM) ────────
+    // ── TECHNICAL (Coding / Robotics / STEM / Hackathons) ─────
     technical: [
       {
-        title:       "Science Olympiad — Junior Category",
+        title:       "ICode Global Hackathon 2024",
         year:        "2024",
-        position:    "National Rank 12",
-        organiser:   "Science Olympiad Foundation",
-        description: "Scored 94/100 in the national-level Science Olympiad, qualifying in the top 15 nationally across 8,000+ participants."
+        position:    "Rank 39 Worldwide",
+        organiser:   "ICode",
+        description: "Competed against participants from across the world in the ICode Global Hackathon and achieved a worldwide rank of 39. An improvement of 67 places from the previous year — the result of focused preparation and a sharper problem-solving approach."
       },
       {
-        title:       "School Robotics Club — Project Lead",
+        title:       "ICode Global Hackathon 2023",
         year:        "2023",
-        position:    "Best Innovation Award",
-        organiser:   "School STEM Department",
-        description: "Led a team of 3 to design and build a line-following robot using Arduino and IR sensors. Presented at the school science fair and won Best Innovation."
+        position:    "Rank 106 Worldwide",
+        organiser:   "ICode",
+        description: "My first entry into the ICode Global Hackathon — ranked 106th worldwide in my debut. The experience opened my eyes to competitive programming and the global community of young coders, and motivated me to push further the next year."
       }
-      // ↑ Add more technical achievements here
+      // ↑ Add more technical achievements here (certificates can be linked later)
     ]
   },
 
@@ -471,7 +516,7 @@ const PORTFOLIO = {
 
   settings: {
     // Shows in the browser tab
-    siteTitle: "Portfolio — Your Name",
+    siteTitle: "Saksham Jha — Portfolio",
 
     // Your GitHub repository URL (fill in after setup)
     githubRepo: "https://github.com/LexerCodes/digital-portfolio",

@@ -159,25 +159,12 @@ function renderAbout() {
 function renderAcademics() {
   const a = PORTFOLIO.academics;
 
-  function gradeClass(g) {
-    const lower = g.toLowerCase();
-    if (g === 'A1') return 'grade-a1';
-    if (g === 'A2') return 'grade-a2';
-    if (g === 'B1') return 'grade-b1';
-    if (g === 'B2') return 'grade-b2';
-    if (lower.includes('progress') || lower.includes('ongoing')) return 'grade-progress';
-    return 'grade-other';
-  }
-
   function buildPeriod(data) {
-    const rows = data.subjects.map(s => `
-      <tr class="table-row">
-        <td class="table-subject">${s.subject}</td>
-        <td class="table-grade">
-          <span class="grade-badge ${gradeClass(s.grade)}">${s.grade}</span>
-        </td>
-        <td class="table-note">${s.note}</td>
-      </tr>`).join('');
+    const cards = data.subjects.map(s => `
+      <div class="subject-card fade-up">
+        <p class="subject-name">${s.subject}</p>
+        <p class="subject-desc">${s.description}</p>
+      </div>`).join('');
 
     return `
       <div class="academic-block fade-up">
@@ -185,18 +172,7 @@ function renderAcademics() {
           <p class="academic-period">${data.period}</p>
           <p class="academic-highlight">${data.highlight}</p>
         </div>
-        <div class="table-wrap">
-          <table class="subject-table">
-            <thead>
-              <tr>
-                <th>Subject</th>
-                <th>Grade</th>
-                <th>Note</th>
-              </tr>
-            </thead>
-            <tbody>${rows}</tbody>
-          </table>
-        </div>
+        <div class="subject-grid">${cards}</div>
       </div>`;
   }
 
@@ -204,7 +180,7 @@ function renderAcademics() {
     <div class="page-header fade-up">
       <p class="page-eyebrow">Academics</p>
       <h1 class="page-title">Academic Journey</h1>
-      <p class="page-subtitle">A class-wise record of performance and growth.</p>
+      <p class="page-subtitle">A subject-by-subject account of how my thinking has grown across school.</p>
     </div>
     ${buildPeriod(a.class5to7)}
     ${buildPeriod(a.class8to9)}

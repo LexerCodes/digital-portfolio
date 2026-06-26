@@ -526,49 +526,38 @@ ul    { list-style: none; }
   line-height: 1.65;
 }
 
-.table-wrap { overflow-x: auto; }
-.subject-table {
-  width: 100%;
-  border-collapse: collapse;
+/* ── Subject cards (descriptive, no grades) ── */
+.subject-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+  padding: 1.5rem;
 }
-.subject-table th {
-  text-align: left;
-  font-size: 0.68rem;
+.subject-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.375rem;
+  transition: border-color var(--t), box-shadow var(--t), transform var(--t);
+}
+.subject-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+.subject-name {
+  font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--text-subtle);
-  padding: 0.875rem 1.5rem;
-  border-bottom: 1px solid var(--border);
-  background: var(--bg);
-  white-space: nowrap;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
 }
-.table-row {
-  border-bottom: 1px solid var(--border);
-  transition: background var(--t);
+.subject-desc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.7;
 }
-.table-row:last-child { border-bottom: none; }
-.table-row:hover { background: var(--bg); }
-.table-row td { padding: 0.875rem 1.5rem; vertical-align: top; }
-
-.table-subject { font-size: 0.9375rem; font-weight: 500; color: var(--text); }
-.table-grade   { white-space: nowrap; }
-.table-note    { font-size: 0.875rem; color: var(--text-muted); line-height: 1.55; }
-
-.grade-badge {
-  display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 700;
-  padding: 3px 10px;
-  border-radius: 20px;
-  white-space: nowrap;
-}
-.grade-a1       { background: var(--green-light);    color: var(--green);  }
-.grade-a2       { background: var(--accent-light);   color: var(--accent); }
-.grade-b1       { background: var(--amber-light);    color: var(--amber);  }
-.grade-b2       { background: #FEF2F2;               color: #DC2626;       }
-.grade-progress { background: var(--surface-raised); color: var(--text-muted); }
-.grade-other    { background: var(--surface-raised); color: var(--text-muted); }
 
 
 /* ════════════════════════════════════════════════════════
