@@ -29,7 +29,7 @@ const PORTFOLIO = {
   personal: {
 
     // Your full name — shows in the hero, navbar, and footer
-    name: "Your Full Name",
+    name: "Saksham Jha",
 
     // Your photo. Steps:
     //   1. Put your photo in the assets/ folder (e.g. assets/photo.jpg)
@@ -38,16 +38,16 @@ const PORTFOLIO = {
     photo: null,
 
     // Date of birth — write it out in full for clarity
-    dob: "10 January 2012",
+    dob: "17 July 2011",
 
     // Your school's full name
-    school: "Your School Name",
+    school: "Vega Schools",
 
     // Your class (just the number is fine)
     class: "Class 10",
 
     // Your city or town
-    city: "Your City",
+    city: "Gurugram",
 
     // ── INTRODUCTION ──────────────────────────────────────────
     // This is the first paragraph visitors read.
@@ -447,18 +447,18 @@ const PORTFOLIO = {
     social: [
       {
         platform: "GitHub",
-        handle:   "@yourusername",
-        url:      "https://github.com/yourusername"   // ← Update this
+        handle:   "@LexerCodes",
+        url:      "https://github.com/LexerCodes"   // ← Update this
       },
       {
         platform: "LinkedIn",
         handle:   "Your Name",
-        url:      null   // ← Add your LinkedIn URL or leave null to hide
+        url:      "https://www.linkedin.com/in/saksham-jha-19ab46286/"   // ← Add your LinkedIn URL or leave null to hide
       },
       {
         platform: "Instagram",
-        handle:   "@yourhandle",
-        url:      null   // ← Add your Instagram URL or leave null to hide
+        handle:   "@saksham.drums",
+        url:      "https://www.instagram.com/saksham.drums/"   // ← Add your Instagram URL or leave null to hide
       }
     ]
   },
