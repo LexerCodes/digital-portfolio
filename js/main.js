@@ -228,15 +228,13 @@ function buildCertSlider(certs, sliderId) {
     const isImage = /\.(jpe?g|png|gif|webp)$/i.test(cert);
     if (isImage) {
       return `<div class="cert-slide">
-        <a href="${cert}" target="_blank" rel="noopener">
-          <img src="${cert}" alt="Certificate" class="cert-img" />
-        </a>
+        <img src="${cert}" alt="Certificate" class="cert-img" />
+        <a href="${cert}" class="cert-open-link" target="_blank" rel="noopener">Open in new tab ↗</a>
       </div>`;
     }
-    // PDFs: Google Docs viewer renders the full page fitted into the frame
-    const viewerUrl = 'https://docs.google.com/viewer?embedded=true&url=' + encodeURIComponent(certAbsUrl(cert));
-    return `<div class="cert-slide">
-      <iframe src="${viewerUrl}" class="cert-frame" frameborder="0"></iframe>
+    // Fallback for PDFs that haven't been converted yet
+    return `<div class="cert-slide cert-slide--pdf">
+      <p class="cert-pdf-note">Convert this PDF to PNG for inline preview.</p>
       <a href="${cert}" class="cert-open-link" target="_blank" rel="noopener">Open in new tab ↗</a>
     </div>`;
   }).join('');
