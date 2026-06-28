@@ -296,26 +296,7 @@ const PORTFOLIO = {
     //   description:  "1–2 sentences.",
     //   certificates: []               ← add files here, or leave []
     // }
-    sports: [
-      {
-        title:        "Football Tournament — Inter-School League",
-        year:         "2022",
-        position:     "Runner Up / 2nd Place",  
-        organiser:    "Sporbit Sports Academy",
-        description:  "Competed in the Sporbit Football Tournament 2023 in the Under-13 category. Sporbit runs one of the most organised grassroots football circuits for young players, and this was one of my early competitive football experiences. The game, the team, the pressure of a structured tournament — it's a different energy from school matches entirely.",
-        certificates: ["assets/certificates/Sporbit.jpg"]
-      },
-      {
-        title:        "Gymnastics Competition — Individual Event",
-        year:         "2022",
-        position:     "N/A",
-        organiser:    "AryaVart Khel Mahasangh",
-        description:  "My first ever gymnastics competition — and it happened to fall on my 13th birthday. Competing at the All India Invitational level in the Under-12 category at Faridabad was the best birthday present I could have given myself. Gymnastics was something I genuinely loved at the time, and stepping onto that floor in front of judges made all the practice feel real. A birthday I won't forget.",
-        certificates: ["assets/certificates/Gymnastics.jpg"]
-      }
-    ],
-
-    // ── CULTURAL (Music / Drums / Theatre / Art) ──────────────
+    // ── TECHNICAL (Coding / Robotics / STEM / Hackathons) ─────
     cultural: [
       {
         title:        "Band Competition - Odyssey",
@@ -323,33 +304,13 @@ const PORTFOLIO = {
         position:     "Runner Up / 2nd Place",
         organiser:    "Organiser name",
         description:  "Our school band wrote and performed our very first original song - \"Udne Do Zara\" for Satya School's Odyssey competition — and took 2nd place. Everything about it was new: the composition, the arrangement, performing something we had created ourselves. I played drums, holding the rhythm together for the whole piece. Our practice sessions were captured by our teacher, and one of those recordings is attached below — raw, unpolished, and one of my favourite memories from school.",
-        certificates: ["assets/certificates/Satya_School.jpg"]
+        certificates: ["assets/certificates/Satya_School.jpg",
+          "assets/Perfomance.mp4"
+        ]
       }
 
       
     ],
-
-    // ── LITERARY (Debate / MUN / Essay / Quiz) ────────────────
-    literary: [
-      {
-        title:        "MUN 2024",
-        year:         "2024",
-        position:     "Participant",
-        organiser:    "IIMUN",
-        description:  "My first ever Model United Nations experience — and it changed how I see the world. Walking into a room full of students debating global issues as country delegates was equal parts intimidating and electrifying. As a first-time delegate at IIMUN Delhi, I learned how to research a country's position, construct arguments, and hold my ground in a formal committee.",
-        certificates: ["assets/certificates/MUN_24.jpg"]
-      },
-      {
-        title:        "MUN 2026",
-        year:         "2026",
-        position:     "Participant",
-        organiser:    "IIMUN",
-        description:  "My second stint at IIMUN Delhi, and a completely different experience from my first. This time I walked in knowing the rules, knowing how committees work — and focused entirely on making my voice count. Two years of growth, from a nervous first-timer to a delegate who knew exactly why he was in the room.",
-        certificates: ["assets/certificates/MUN_26.jpg"]
-      }
-    ],
-
-    // ── TECHNICAL (Coding / Robotics / STEM / Hackathons) ─────
     technical: [
       {
         title:        "ICode Global Hackathon 2023",
@@ -379,9 +340,49 @@ const PORTFOLIO = {
         description:  "For my STEM-O-VATION presentation, I demonstrated thermal conductivity using a simple but striking experiment — a balloon filled with water held over a candle flame. Unlike an empty balloon which pops instantly, the water absorbs the heat and the balloon survives. What looks like magic is just physics. Received a Certificate of Excellence from Vega Schools for the presentation.",
         certificates: ["assets/certificates/Stem.jpg"]
       },
-      
-      // ↑ Add more technical achievements here
     ],
+    sports: [
+      {
+        title:        "Football Tournament — Inter-School League",
+        year:         "2022",
+        position:     "Runner Up / 2nd Place",  
+        organiser:    "Sporbit Sports Academy",
+        description:  "Competed in the Sporbit Football Tournament 2023 in the Under-13 category. Sporbit runs one of the most organised grassroots football circuits for young players, and this was one of my early competitive football experiences. The game, the team, the pressure of a structured tournament — it's a different energy from school matches entirely.",
+        certificates: ["assets/certificates/Sporbit.jpg"]
+      },
+      {
+        title:        "Gymnastics Competition — Individual Event",
+        year:         "2022",
+        position:     "N/A",
+        organiser:    "AryaVart Khel Mahasangh",
+        description:  "My first ever gymnastics competition — and it happened to fall on my 13th birthday. Competing at the All India Invitational level in the Under-12 category at Faridabad was the best birthday present I could have given myself. Gymnastics was something I genuinely loved at the time, and stepping onto that floor in front of judges made all the practice feel real. A birthday I won't forget.",
+        certificates: ["assets/certificates/Gymnastics.jpg"]
+      }
+    ],
+
+    // ── CULTURAL (Music / Drums / Theatre / Art) ──────────────
+  
+
+    // ── LITERARY (Debate / MUN / Essay / Quiz) ────────────────
+    literary: [
+      {
+        title:        "MUN 2024",
+        year:         "2024",
+        position:     "Participant",
+        organiser:    "IIMUN",
+        description:  "My first ever Model United Nations experience — and it changed how I see the world. Walking into a room full of students debating global issues as country delegates was equal parts intimidating and electrifying. As a first-time delegate at IIMUN Delhi, I learned how to research a country's position, construct arguments, and hold my ground in a formal committee.",
+        certificates: ["assets/certificates/MUN_24.jpg"]
+      },
+      {
+        title:        "MUN 2026",
+        year:         "2026",
+        position:     "Participant",
+        organiser:    "IIMUN",
+        description:  "My second stint at IIMUN Delhi, and a completely different experience from my first. This time I walked in knowing the rules, knowing how committees work — and focused entirely on making my voice count. Two years of growth, from a nervous first-timer to a delegate who knew exactly why he was in the room.",
+        certificates: ["assets/certificates/MUN_26.jpg"]
+      }
+    ],
+
     academics: [
       {
         title:        "Asset Exam",

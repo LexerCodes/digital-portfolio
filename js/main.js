@@ -226,10 +226,16 @@ function buildCertSlider(certs, sliderId) {
 
   const slides = certs.map(cert => {
     const isImage = /\.(jpe?g|png|gif|webp)$/i.test(cert);
+    const isVideo = /\.(mp4|webm|mov|ogg)$/i.test(cert);
     if (isImage) {
       return `<div class="cert-slide">
         <img src="${cert}" alt="Certificate" class="cert-img" />
         <a href="${cert}" class="cert-open-link" target="_blank" rel="noopener">Open in new tab ↗</a>
+      </div>`;
+    }
+    if (isVideo) {
+      return `<div class="cert-slide">
+        <video src="${cert}" class="cert-video" controls playsinline></video>
       </div>`;
     }
     // Fallback for PDFs that haven't been converted yet
@@ -267,7 +273,8 @@ function renderAchievements() {
     { key: 'sports',    label: 'Sports',    color: 'green'  },
     { key: 'cultural',  label: 'Cultural',  color: 'purple' },
     { key: 'literary',  label: 'Literary',  color: 'amber'  },
-    { key: 'technical', label: 'Technical', color: 'blue'   }
+    { key: 'technical', label: 'Technical', color: 'blue'   },
+    { key: 'academics', label: 'Academic',  color: 'navy'   }
   ];
 
   const sections = categories.map(cat => {
