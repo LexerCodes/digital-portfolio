@@ -303,7 +303,7 @@ const PORTFOLIO = {
         year:         "2025",
         position:     "Runner Up / 2nd Place",
         organiser:    "Organiser name",
-        description:  "Our school band wrote and performed our very first original song - \"Udne Do Zara\" for Satya School's Odyssey competition — and took 2nd place. Everything about it was new: the composition, the arrangement, performing something we had created ourselves. I played drums, holding the rhythm together for the whole piece. Our practice sessions were captured by our teacher, and one of those recordings is attached below — raw, unpolished, and one of my favourite memories from school.",
+        description:  "Our school band wrote and performed our very first original song - \"Udne Do Zara\" for Satya School's Odyssey competition — and took 2nd place. Everything about it was new: the composition, the arrangement, performing something we had created ourselves. I played drums, holding the rhythm together for the whole piece. I've attached our performance video and the certificate we received for it.",
         certificates: ["assets/certificates/Satya_School.jpg",
           "assets/Perfomance.mp4"
         ]
