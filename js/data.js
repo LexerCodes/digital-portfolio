@@ -339,7 +339,7 @@ const PORTFOLIO = {
         position:     "Rank 106 Worldwide",
         organiser:    "ICode",
         description:  "My debut in the ICode Global Hackathon — ranked 106th worldwide. The experience opened my eyes to competitive programming and the global community of young coders, and set the benchmark I worked hard to surpass the following year.",
-        certificates: ["assets/certificates/Saksham_National_Finals_2023.pdf"]
+        certificates: ["assets/certificates/Saksham_National_Finals_2023.jpg"]
       },
       {
         title:        "ICode Global Hackathon 2024",
@@ -348,9 +348,9 @@ const PORTFOLIO = {
         organiser:    "ICode",
         description:  "Competed across three progressive stages: secured 5th rank out of 13,530 students in India, advanced to 16th rank out of 1,290 students across Asia, then reached the global finals — placing 39th out of 604 finalists worldwide. An improvement of 67 positions from Rank 106 the previous year.",
         certificates: [
-          "assets/certificates/Saksham_Zonal_Finals_2024.pdf",
-          "assets/certificates/icode_event_Asia-National_certificate.pdf",
-          "assets/certificates/icode_event_Global-certificate.pdf"
+          "assets/certificates/Saksham_Zonal_Finals_2024.jpg",
+          "assets/certificates/icode_event_Asia-National_certificate.jpg",
+          "assets/certificates/icode_event_Global-certificate.jpg"
         ]
       }
       // ↑ Add more technical achievements here
