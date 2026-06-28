@@ -189,6 +189,79 @@ function renderAcademics() {
 }
 
 
+// ── CERTIFICATE SLIDER ───────────────────────────────────────────────────────
+
+const _certState = {};
+
+function certSlide(id, dir) {
+  const slider = document.getElementById(id);
+  if (!slider) return;
+  const track  = slider.querySelector('.cert-track');
+  const slides = slider.querySelectorAll('.cert-slide');
+  const dots   = slider.querySelectorAll('.cert-dot');
+  _certState[id] = ((_certState[id] || 0) + dir + slides.length) % slides.length;
+  track.style.transform = `translateX(-${_certState[id] * 100}%)`;
+  dots.forEach((d, i) => d.classList.toggle('active', i === _certState[id]));
+}
+
+function certGoTo(id, idx) {
+  const slider = document.getElementById(id);
+  if (!slider) return;
+  const track = slider.querySelector('.cert-track');
+  const dots  = slider.querySelectorAll('.cert-dot');
+  _certState[id] = idx;
+  track.style.transform = `translateX(-${idx * 100}%)`;
+  dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+}
+
+function buildCertSlider(certs, sliderId) {
+  if (!certs || certs.length === 0) return '';
+
+  const slides = certs.map(cert => {
+    const isImage = /\.(jpe?g|png|gif|webp)$/i.test(cert);
+    if (isImage) {
+      return `<div class="cert-slide">
+        <a href="${cert}" target="_blank" rel="noopener">
+          <img src="${cert}" alt="Certificate" class="cert-img" />
+        </a>
+      </div>`;
+    }
+    const label = cert.startsWith('http') ? 'View online' : cert.split('/').pop();
+    return `<div class="cert-slide">
+      <div class="cert-doc">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="9" y1="15" x2="15" y2="15"/>
+          <line x1="9" y1="11" x2="15" y2="11"/>
+          <line x1="9" y1="19" x2="12" y2="19"/>
+        </svg>
+        <p class="cert-doc-name">${label}</p>
+        <a href="${cert}" class="cert-open" target="_blank" rel="noopener">Open certificate ↗</a>
+      </div>
+    </div>`;
+  }).join('');
+
+  const multiple = certs.length > 1;
+  const arrows = multiple ? `
+    <button class="cert-arrow cert-prev" onclick="certSlide('${sliderId}', -1)" aria-label="Previous">&#8592;</button>
+    <button class="cert-arrow cert-next" onclick="certSlide('${sliderId}',  1)" aria-label="Next">&#8594;</button>` : '';
+  const dots = multiple ? `
+    <div class="cert-dots">
+      ${certs.map((_, i) => `<button class="cert-dot${i === 0 ? ' active' : ''}" onclick="certGoTo('${sliderId}', ${i})" aria-label="Go to certificate ${i + 1}"></button>`).join('')}
+    </div>` : '';
+
+  return `
+    <div class="cert-section">
+      <p class="cert-label">${multiple ? `Certificates (${certs.length})` : 'Certificate'}</p>
+      <div class="cert-slider" id="${sliderId}">
+        <div class="cert-track">${slides}</div>
+        ${arrows}
+      </div>
+      ${dots}
+    </div>`;
+}
+
 // ── ACHIEVEMENTS PAGE ────────────────────────────────────────────────────────
 
 function renderAchievements() {
@@ -204,31 +277,37 @@ function renderAchievements() {
     const items = a[cat.key];
     if (!items || items.length === 0) return '';
 
-    const cards = items.map(item => `
-      <div class="achievement-card fade-up">
-        <div class="achievement-top">
-          <div>
-            <span class="achievement-badge badge-${cat.color}">${cat.label}</span>
-            <h3 class="achievement-title">${item.title}</h3>
+    const cards = items.map((item, idx) => {
+      const sliderId = `cert-${cat.key}-${idx}`;
+      // support both  certificates: []  and legacy  certificate: "..."
+      const certs = Array.isArray(item.certificates)
+        ? item.certificates
+        : (item.certificate ? [item.certificate] : []);
+
+      return `
+        <div class="achievement-card fade-up">
+          <div class="achievement-body">
+            <div class="achievement-top">
+              <div>
+                <span class="achievement-badge badge-${cat.color}">${cat.label}</span>
+                <h3 class="achievement-title">${item.title}</h3>
+              </div>
+              ${item.position ? `<span class="achievement-position">${item.position}</span>` : ''}
+            </div>
+            <p class="achievement-desc">${item.description}</p>
+            <div class="achievement-meta">
+              <span class="achievement-org">${item.organiser}</span>
+              <span class="achievement-yr">${item.year}</span>
+            </div>
           </div>
-          ${item.position ? `<span class="achievement-position">${item.position}</span>` : ''}
-        </div>
-        <p class="achievement-desc">${item.description}</p>
-        <div class="achievement-meta">
-          <span>${item.organiser}</span>
-          <div class="achievement-meta-right">
-            <span>${item.year}</span>
-            ${item.certificate
-              ? `<a href="${item.certificate}" class="cert-link" target="_blank" rel="noopener">Certificate ↗</a>`
-              : ''}
-          </div>
-        </div>
-      </div>`).join('');
+          ${buildCertSlider(certs, sliderId)}
+        </div>`;
+    }).join('');
 
     return `
       <section class="section">
         <p class="section-label fade-up">${cat.label}</p>
-        <div class="achievement-grid">${cards}</div>
+        <div class="achievement-list">${cards}</div>
       </section>`;
   }).join('');
 

@@ -263,79 +263,93 @@ const PORTFOLIO = {
   //  }
   // ════════════════════════════════════════════════════════
 
+  // ════════════════════════════════════════════════════════
+  //  HOW TO ADD CERTIFICATES TO ANY ACHIEVEMENT
+  //
+  //  Add a  certificates  field as an array:
+  //
+  //  certificates: []                        ← no cert yet  (hides the section)
+  //  certificates: ["assets/certificates/myfile.pdf"]  ← one cert
+  //  certificates: [                         ← multiple certs → auto slider
+  //    "assets/certificates/stage1.jpg",
+  //    "assets/certificates/stage2.jpg"
+  //  ]
+  //
+  //  You can also use an online link (Google Drive, Credly, etc.):
+  //  certificates: ["https://drive.google.com/file/d/..."]
+  //
+  //  Steps:
+  //   1. Put the file in assets/certificates/ folder
+  //   2. Set the path above
+  //   3. git add + commit + push  (same as always)
+  // ════════════════════════════════════════════════════════
+
   achievements: {
 
     // ── SPORTS ────────────────────────────────────────────────
+    // Each achievement pattern:
+    // {
+    //   title:        "Event name",
+    //   year:         "2024",
+    //   position:     "Your result",   ← or null
+    //   organiser:    "Who ran it",
+    //   description:  "1–2 sentences.",
+    //   certificates: []               ← add files here, or leave []
+    // }
     sports: [
-      // Replace this example with your real sports achievements.
-      // {
-      //   title:       "Tournament or event name",
-      //   year:        "2024",
-      //   position:    "Your result / rank / position",
-      //   organiser:   "Who organised it",
-      //   description: "1–2 sentences on what you did and why it mattered."
-      // },
       {
-        title:       "Add Your Sports Achievement",
-        year:        "2024",
-        position:    null,
-        organiser:   "Organiser name",
-        description: "Replace this with a real sports achievement — a tournament, a school match, a personal best. Be specific about your role and the result."
+        title:        "Add Your Sports Achievement",
+        year:         "2024",
+        position:     null,
+        organiser:    "Organiser name",
+        description:  "Replace this with a real sports achievement — a tournament, a school match, a personal best. Be specific about your role and the result.",
+        certificates: []
       }
     ],
 
     // ── CULTURAL (Music / Drums / Theatre / Art) ──────────────
     cultural: [
-      // Add your music/drums/cultural achievements here.
       {
-        title:       "Add Your Cultural Achievement",
-        year:        "2024",
-        position:    null,
-        organiser:   "Organiser name",
-        description: "Replace this with a real cultural achievement — a performance, a concert, a music competition, a school play. You play drums and sing, so think about performances you've given."
+        title:        "Add Your Cultural Achievement",
+        year:         "2024",
+        position:     null,
+        organiser:    "Organiser name",
+        description:  "Replace this with a real cultural achievement — a performance, concert, music competition, or school play. You play drums and sing, so think about performances you've given.",
+        certificates: []
       }
     ],
 
     // ── LITERARY (Debate / MUN / Essay / Quiz) ────────────────
     literary: [
-      // Add any debate, MUN, essay, quiz, or public speaking achievements here.
       {
-        title:       "Add Your Literary Achievement",
-        year:        "2024",
-        position:    null,
-        organiser:   "Organiser name",
-        description: "Replace this with a debate, MUN, essay competition, quiz, or any literary achievement."
+        title:        "Add Your Literary Achievement",
+        year:         "2024",
+        position:     null,
+        organiser:    "Organiser name",
+        description:  "Replace this with a debate, MUN conference, essay competition, quiz, or any literary achievement.",
+        certificates: []
       }
     ],
 
     // ── TECHNICAL (Coding / Robotics / STEM / Hackathons) ─────
-    //
-    // HOW TO ADD A CERTIFICATE to any achievement (in any category):
-    //   Step 1 — Copy your certificate file into:  assets/certificates/
-    //            (accepted formats: .pdf  .jpg  .png)
-    //   Step 2 — Add this line inside the achievement:
-    //            certificate: "assets/certificates/your-file-name.pdf"
-    //   OR if you have a Google Drive / online link instead:
-    //            certificate: "https://drive.google.com/your-link-here"
-    //   Leave as  null  if you don't have the certificate ready yet.
     technical: [
       {
-        title:       "ICode Global Hackathon 2024",
-        year:        "2024",
-        position:    "Rank 39 Worldwide",
-        organiser:   "ICode",
-        description: "Competed against participants from across the world in the ICode Global Hackathon and achieved a worldwide rank of 39. An improvement of 67 places from the previous year — the result of focused preparation and a sharper problem-solving approach.",
-        certificate: null   // ← replace null with "assets/certificates/icode-2024.pdf" once you add the file
+        title:        "ICode Global Hackathon 2024",
+        year:         "2024",
+        position:     "Rank 39 Worldwide",
+        organiser:    "ICode",
+        description:  "Competed across three progressive stages: secured 5th rank out of 13,530 students in India, advanced to 16th rank out of 1,290 students across Asia, then reached the global finals — placing 39th out of 604 finalists worldwide. An improvement of 67 positions from Rank 106 the previous year.",
+        certificates: []   // ← e.g. ["assets/certificates/icode-2024-india.jpg", "assets/certificates/icode-2024-global.pdf"]
       },
       {
-        title:       "ICode Global Hackathon 2023",
-        year:        "2023",
-        position:    "Rank 106 Worldwide",
-        organiser:   "ICode",
-        description: "My first entry into the ICode Global Hackathon — ranked 106th worldwide in my debut. The experience opened my eyes to competitive programming and the global community of young coders, and motivated me to push further the next year.",
-        certificate: null   // ← replace null with "assets/certificates/icode-2023.pdf" once you add the file
+        title:        "ICode Global Hackathon 2023",
+        year:         "2023",
+        position:     "Rank 106 Worldwide",
+        organiser:    "ICode",
+        description:  "My debut in the ICode Global Hackathon — ranked 106th worldwide. The experience opened my eyes to competitive programming and the global community of young coders, and set the benchmark I worked hard to surpass the following year.",
+        certificates: []   // ← e.g. ["assets/certificates/icode-2023.pdf"]
       }
-      // ↑ You can add the  certificate  field to sports/cultural/literary achievements too
+      // ↑ Add more technical achievements here
     ]
   },
 
