@@ -270,10 +270,10 @@ function buildCertSlider(certs, sliderId) {
 function renderAchievements() {
   const a = PORTFOLIO.achievements;
   const categories = [
-    { key: 'sports',    label: 'Sports',    color: 'green'  },
     { key: 'cultural',  label: 'Cultural',  color: 'purple' },
-    { key: 'literary',  label: 'Literary',  color: 'amber'  },
     { key: 'technical', label: 'Technical', color: 'blue'   },
+    { key: 'sports',    label: 'Sports',    color: 'green'  },
+    { key: 'literary',  label: 'Literary',  color: 'amber'  },
     { key: 'academics', label: 'Academic',  color: 'navy'   }
   ];
 
