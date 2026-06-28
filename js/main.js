@@ -215,6 +215,12 @@ function certGoTo(id, idx) {
   dots.forEach((d, i) => d.classList.toggle('active', i === idx));
 }
 
+function certAbsUrl(path) {
+  if (path.startsWith('http')) return path;
+  const base = (PORTFOLIO.settings.liveUrl || '').replace(/\/$/, '');
+  return base ? base + '/' + path : window.location.origin + '/' + path;
+}
+
 function buildCertSlider(certs, sliderId) {
   if (!certs || certs.length === 0) return '';
 
@@ -227,12 +233,11 @@ function buildCertSlider(certs, sliderId) {
         </a>
       </div>`;
     }
-    // PDF or other file — embed inline, small link to open full
+    // PDFs: Google Docs viewer renders the full page fitted into the frame
+    const viewerUrl = 'https://docs.google.com/viewer?embedded=true&url=' + encodeURIComponent(certAbsUrl(cert));
     return `<div class="cert-slide">
-      <div class="cert-embed-wrap">
-        <embed src="${cert}" type="application/pdf" class="cert-embed" />
-        <a href="${cert}" class="cert-open-link" target="_blank" rel="noopener">Open in new tab ↗</a>
-      </div>
+      <iframe src="${viewerUrl}" class="cert-frame" frameborder="0"></iframe>
+      <a href="${cert}" class="cert-open-link" target="_blank" rel="noopener">Open in new tab ↗</a>
     </div>`;
   }).join('');
 
