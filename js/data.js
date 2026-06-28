@@ -334,20 +334,24 @@ const PORTFOLIO = {
     // ── TECHNICAL (Coding / Robotics / STEM / Hackathons) ─────
     technical: [
       {
-        title:        "ICode Global Hackathon 2024",
-        year:         "2024",
-        position:     "Rank 39 Worldwide",
-        organiser:    "ICode",
-        description:  "Competed across three progressive stages: secured 5th rank out of 13,530 students in India, advanced to 16th rank out of 1,290 students across Asia, then reached the global finals — placing 39th out of 604 finalists worldwide. An improvement of 67 positions from Rank 106 the previous year.",
-        certificates: []   // ← e.g. ["assets/certificates/icode-2024-india.jpg", "assets/certificates/icode-2024-global.pdf"]
-      },
-      {
         title:        "ICode Global Hackathon 2023",
         year:         "2023",
         position:     "Rank 106 Worldwide",
         organiser:    "ICode",
         description:  "My debut in the ICode Global Hackathon — ranked 106th worldwide. The experience opened my eyes to competitive programming and the global community of young coders, and set the benchmark I worked hard to surpass the following year.",
-        certificates: []   // ← e.g. ["assets/certificates/icode-2023.pdf"]
+        certificates: ["assets/certificates/Saksham_National_Finals_2023.pdf"]
+      },
+      {
+        title:        "ICode Global Hackathon 2024",
+        year:         "2024",
+        position:     "Rank 39 Worldwide",
+        organiser:    "ICode",
+        description:  "Competed across three progressive stages: secured 5th rank out of 13,530 students in India, advanced to 16th rank out of 1,290 students across Asia, then reached the global finals — placing 39th out of 604 finalists worldwide. An improvement of 67 positions from Rank 106 the previous year.",
+        certificates: [
+          "assets/certificates/Saksham_Zonal_Finals_2024.pdf",
+          "assets/certificates/icode_event_Asia-National_certificate.pdf",
+          "assets/certificates/icode_event_Global-certificate.pdf"
+        ]
       }
       // ↑ Add more technical achievements here
     ]
