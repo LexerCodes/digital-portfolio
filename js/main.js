@@ -198,7 +198,8 @@ function certSlide(id, dir) {
   if (!slider) return;
   const track  = slider.querySelector('.cert-track');
   const slides = slider.querySelectorAll('.cert-slide');
-  const dots   = slider.querySelectorAll('.cert-dot');
+  // dots live in .cert-section (parent), not inside the slider div itself
+  const dots   = slider.closest('.cert-section').querySelectorAll('.cert-dot');
   _certState[id] = ((_certState[id] || 0) + dir + slides.length) % slides.length;
   track.style.transform = `translateX(-${_certState[id] * 100}%)`;
   dots.forEach((d, i) => d.classList.toggle('active', i === _certState[id]));
@@ -208,7 +209,7 @@ function certGoTo(id, idx) {
   const slider = document.getElementById(id);
   if (!slider) return;
   const track = slider.querySelector('.cert-track');
-  const dots  = slider.querySelectorAll('.cert-dot');
+  const dots  = slider.closest('.cert-section').querySelectorAll('.cert-dot');
   _certState[id] = idx;
   track.style.transform = `translateX(-${idx * 100}%)`;
   dots.forEach((d, i) => d.classList.toggle('active', i === idx));
@@ -226,18 +227,11 @@ function buildCertSlider(certs, sliderId) {
         </a>
       </div>`;
     }
-    const label = cert.startsWith('http') ? 'View online' : cert.split('/').pop();
+    // PDF or other file — embed inline, small link to open full
     return `<div class="cert-slide">
-      <div class="cert-doc">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
-          <polyline points="14 2 14 8 20 8"/>
-          <line x1="9" y1="15" x2="15" y2="15"/>
-          <line x1="9" y1="11" x2="15" y2="11"/>
-          <line x1="9" y1="19" x2="12" y2="19"/>
-        </svg>
-        <p class="cert-doc-name">${label}</p>
-        <a href="${cert}" class="cert-open" target="_blank" rel="noopener">Open certificate ↗</a>
+      <div class="cert-embed-wrap">
+        <embed src="${cert}" type="application/pdf" class="cert-embed" />
+        <a href="${cert}" class="cert-open-link" target="_blank" rel="noopener">Open in new tab ↗</a>
       </div>
     </div>`;
   }).join('');
