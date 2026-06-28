@@ -309,22 +309,33 @@ const PORTFOLIO = {
     ],
 
     // ── TECHNICAL (Coding / Robotics / STEM / Hackathons) ─────
+    //
+    // HOW TO ADD A CERTIFICATE to any achievement (in any category):
+    //   Step 1 — Copy your certificate file into:  assets/certificates/
+    //            (accepted formats: .pdf  .jpg  .png)
+    //   Step 2 — Add this line inside the achievement:
+    //            certificate: "assets/certificates/your-file-name.pdf"
+    //   OR if you have a Google Drive / online link instead:
+    //            certificate: "https://drive.google.com/your-link-here"
+    //   Leave as  null  if you don't have the certificate ready yet.
     technical: [
       {
         title:       "ICode Global Hackathon 2024",
         year:        "2024",
         position:    "Rank 39 Worldwide",
         organiser:   "ICode",
-        description: "Competed against participants from across the world in the ICode Global Hackathon and achieved a worldwide rank of 39. An improvement of 67 places from the previous year — the result of focused preparation and a sharper problem-solving approach."
+        description: "Competed against participants from across the world in the ICode Global Hackathon and achieved a worldwide rank of 39. An improvement of 67 places from the previous year — the result of focused preparation and a sharper problem-solving approach.",
+        certificate: null   // ← replace null with "assets/certificates/icode-2024.pdf" once you add the file
       },
       {
         title:       "ICode Global Hackathon 2023",
         year:        "2023",
         position:    "Rank 106 Worldwide",
         organiser:   "ICode",
-        description: "My first entry into the ICode Global Hackathon — ranked 106th worldwide in my debut. The experience opened my eyes to competitive programming and the global community of young coders, and motivated me to push further the next year."
+        description: "My first entry into the ICode Global Hackathon — ranked 106th worldwide in my debut. The experience opened my eyes to competitive programming and the global community of young coders, and motivated me to push further the next year.",
+        certificate: null   // ← replace null with "assets/certificates/icode-2023.pdf" once you add the file
       }
-      // ↑ Add more technical achievements here (certificates can be linked later)
+      // ↑ You can add the  certificate  field to sports/cultural/literary achievements too
     ]
   },
 
@@ -486,7 +497,7 @@ const PORTFOLIO = {
     message: "I'm always open to connecting — whether you're a teacher, a collaborator, or just someone who wants to chat about tech, football, or music. Reach me directly or fill in the form below.",
 
     // Your email address
-    email: "your.email@gmail.com",
+    email: "itzsakshamop@gmail.com",
 
     // Social links — set url to null to hide that platform entirely
     social: [
@@ -496,8 +507,8 @@ const PORTFOLIO = {
         url:      "https://github.com/LexerCodes"   // ← Update this
       },
       {
-        platform: "LinkedIn",
-        handle:   "Your Name",
+        platform: "Linkedin",
+        handle:   "Saksham Jha",
         url:      "https://www.linkedin.com/in/saksham-jha-19ab46286/"   // ← Add your LinkedIn URL or leave null to hide
       },
       {

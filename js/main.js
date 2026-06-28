@@ -216,7 +216,12 @@ function renderAchievements() {
         <p class="achievement-desc">${item.description}</p>
         <div class="achievement-meta">
           <span>${item.organiser}</span>
-          <span>${item.year}</span>
+          <div class="achievement-meta-right">
+            <span>${item.year}</span>
+            ${item.certificate
+              ? `<a href="${item.certificate}" class="cert-link" target="_blank" rel="noopener">Certificate ↗</a>`
+              : ''}
+          </div>
         </div>
       </div>`).join('');
 
