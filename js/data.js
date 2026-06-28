@@ -35,7 +35,7 @@ const PORTFOLIO = {
     //   1. Put your photo in the assets/ folder (e.g. assets/photo.jpg)
     //   2. Change null below to "assets/photo.jpg"
     // Leave as null to show a placeholder until you're ready.
-    photo: null,
+    photo: "assets/Saksham-Pic.jpg",
 
     // Date of birth — write it out in full for clarity
     dob: "17 July 2011",
@@ -54,7 +54,7 @@ const PORTFOLIO = {
     // Write 2–3 sentences in YOUR OWN VOICE.
     // What excites you? What do you stand for? What's your story?
     // Aim for honest and specific — not generic.
-    intro: "I'm a Class 10 student at Vega Schools, Gurugram — passionate about coding, football, and music, in roughly that order. For me, coding is puzzle-solving at its best: every bug is a clue, every working project a small win. When I'm not at a keyboard you'll find me on the football pitch or behind a drum kit — and I think that's why I care so much about teamwork, because it shows up everywhere I go.",
+    intro: "I'm a Class 10 student at Vega Schools, Gurugram, who is really passionate about coding, football, and music, in roughly that order. For me, coding is puzzle-solving at its best: every bug is a clue, every working project a small win. When I'm not at a keyboard you'll find me on the football pitch or behind a drum kit! I think that's why I care so much about teamwork, because it shows up everywhere I go.",
 
     // ── INTEREST TAGS ─────────────────────────────────────────
     // Shown as coloured pills below your intro.
@@ -298,36 +298,54 @@ const PORTFOLIO = {
     // }
     sports: [
       {
-        title:        "Add Your Sports Achievement",
-        year:         "2024",
-        position:     null,
-        organiser:    "Organiser name",
-        description:  "Replace this with a real sports achievement — a tournament, a school match, a personal best. Be specific about your role and the result.",
-        certificates: []
+        title:        "Football Tournament — Inter-School League",
+        year:         "2022",
+        position:     "Runner Up / 2nd Place",  
+        organiser:    "Sporbit Sports Academy",
+        description:  "Competed in the Sporbit Football Tournament 2023 in the Under-13 category. Sporbit runs one of the most organised grassroots football circuits for young players, and this was one of my early competitive football experiences. The game, the team, the pressure of a structured tournament — it's a different energy from school matches entirely.",
+        certificates: ["assets/certificates/Sporbit.jpg"]
+      },
+      {
+        title:        "Gymnastics Competition — Individual Event",
+        year:         "2022",
+        position:     "N/A",
+        organiser:    "AryaVart Khel Mahasangh",
+        description:  "My first ever gymnastics competition — and it happened to fall on my 13th birthday. Competing at the All India Invitational level in the Under-12 category at Faridabad was the best birthday present I could have given myself. Gymnastics was something I genuinely loved at the time, and stepping onto that floor in front of judges made all the practice feel real. A birthday I won't forget.",
+        certificates: ["assets/certificates/Gymnastics.jpg"]
       }
     ],
 
     // ── CULTURAL (Music / Drums / Theatre / Art) ──────────────
     cultural: [
       {
-        title:        "Add Your Cultural Achievement",
-        year:         "2024",
-        position:     null,
+        title:        "Band Competition - Odyssey",
+        year:         "2025",
+        position:     "Runner Up / 2nd Place",
         organiser:    "Organiser name",
-        description:  "Replace this with a real cultural achievement — a performance, concert, music competition, or school play. You play drums and sing, so think about performances you've given.",
-        certificates: []
+        description:  "Our school band wrote and performed our very first original song - \"Udne Do Zara\" for Satya School's Odyssey competition — and took 2nd place. Everything about it was new: the composition, the arrangement, performing something we had created ourselves. I played drums, holding the rhythm together for the whole piece. Our practice sessions were captured by our teacher, and one of those recordings is attached below — raw, unpolished, and one of my favourite memories from school.",
+        certificates: ["assets/certificates/Satya_School.jpg"]
       }
+
+      
     ],
 
     // ── LITERARY (Debate / MUN / Essay / Quiz) ────────────────
     literary: [
       {
-        title:        "Add Your Literary Achievement",
+        title:        "MUN 2024",
         year:         "2024",
-        position:     null,
-        organiser:    "Organiser name",
-        description:  "Replace this with a debate, MUN conference, essay competition, quiz, or any literary achievement.",
-        certificates: []
+        position:     "Participant",
+        organiser:    "IIMUN",
+        description:  "My first ever Model United Nations experience — and it changed how I see the world. Walking into a room full of students debating global issues as country delegates was equal parts intimidating and electrifying. As a first-time delegate at IIMUN Delhi, I learned how to research a country's position, construct arguments, and hold my ground in a formal committee.",
+        certificates: ["assets/certificates/MUN_24.jpg"]
+      },
+      {
+        title:        "MUN 2026",
+        year:         "2026",
+        position:     "Participant",
+        organiser:    "IIMUN",
+        description:  "My second stint at IIMUN Delhi, and a completely different experience from my first. This time I walked in knowing the rules, knowing how committees work — and focused entirely on making my voice count. Two years of growth, from a nervous first-timer to a delegate who knew exactly why he was in the room.",
+        certificates: ["assets/certificates/MUN_26.jpg"]
       }
     ],
 
@@ -352,8 +370,27 @@ const PORTFOLIO = {
           "assets/certificates/icode_event_Asia-National_certificate.jpg",
           "assets/certificates/icode_event_Global-certificate.jpg"
         ]
-      }
+      },
+      {
+        title:        "Stem-O-Vation",
+        year:         "2023",
+        position:     "Best Presentation",
+        organiser:    "Vega Schools",
+        description:  "For my STEM-O-VATION presentation, I demonstrated thermal conductivity using a simple but striking experiment — a balloon filled with water held over a candle flame. Unlike an empty balloon which pops instantly, the water absorbs the heat and the balloon survives. What looks like magic is just physics. Received a Certificate of Excellence from Vega Schools for the presentation.",
+        certificates: ["assets/certificates/Stem.jpg"]
+      },
+      
       // ↑ Add more technical achievements here
+    ],
+    academics: [
+      {
+        title:        "Asset Exam",
+        year:         "2023",
+        position:     "Got Qualified for Talent Search",
+        organiser:    "Asset",
+        description:  "Placing in the top 15% of students nationwide in the Ei ASSET exam to qualify for the Talent Search was a moment I didn't fully appreciate at the time. It was the first time I'd been selected for something purely on academic merit — and I let the opportunity slip by without giving it the attention it deserved. It's a decision I've thought about more than once since. Some lessons hit harder in hindsight.",
+        certificates: ["assets/certificates/Asset.jpg"]
+      }
     ]
   },
 
@@ -424,26 +461,13 @@ const PORTFOLIO = {
 
   community: [
     {
-      title:        "Teaching Assistant — Digital Literacy",
-      organisation: "Pratham NGO",
+      title:        "Donating Stuff to the Needy",
+      organisation: "The Earth Saviours Foundation",
       year:         "2024",
-      hours:        "60",
-      description:  "Taught basic computer skills — typing, email, internet safety — to 25 underprivileged children in Grades 5–7. Conducted sessions every Saturday for 3 months. By the end, all 25 students could independently use Google Classroom to submit homework."
+      hours:        null,
+      description:  "Volunteering with The Earth Saviours Foundation meant spending time at shelter homes for abandoned senior citizens and differently-abled individuals in Gurugram. It was one of those experiences that quietly shifts your perspective. The appreciation certificate from their President was kind — but the real takeaway was far more personal than any piece of paperTaught basic computer skills — typing, email, internet safety — to 25 underprivileged children in Grades 5–7. Conducted sessions every Saturday for 3 months. By the end, all 25 students could independently use Google Classroom to submit homework."
     },
-    {
-      title:        "Beach Clean-Up Drive",
-      organisation: "Green Earth Foundation",
-      year:         "2023",
-      hours:        "8",
-      description:  "Volunteered with a team of 40 students to clean a 2km stretch of coastline. Collected over 120kg of plastic waste which was sorted and sent for recycling through a certified facility."
-    },
-    {
-      title:        "Annual Blood Donation Camp — Co-Organiser",
-      organisation: "School Student Council",
-      year:         "2024",
-      hours:        "20",
-      description:  "Co-organised the annual school blood donation camp. Coordinated logistics with the Red Cross, managed the flow of 150 donors, and designed the awareness campaign posters distributed across the school."
-    }
+    
     // ↑ Add more community activities here
   ],
 
